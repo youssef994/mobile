@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="gridcomputerRowModel" type="com.youssefsapplication.app.modules.dashboardadmin.data.model.GridcomputerRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumncomputer"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+        <ImageView android:id="@+id/imageComputer"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_36pxh"
+            android:layout_marginEnd="@dimen/_51pxh"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_marginTop="@dimen/_21pxv"
+            android:layout_width="@dimen/_38pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_computer"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_computer"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtEtudiant"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_41pxv"
+            android:layout_marginEnd="@dimen/_50pxh"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{gridcomputerRowModel.txtEtudiant}"
+            style="@style/txtABeeZeeregular15" tools:text="@string/lbl_etudiant2"/>
+    </LinearLayout>
+</layout>
