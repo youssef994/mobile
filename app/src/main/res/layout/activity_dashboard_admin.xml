@@ -12,7 +12,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/_10pxv"
             android:layout_width="match_parent" android:orientation="vertical">
-            <androidx.appcompat.widget.Toolbar android:gravity="start"
+            <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarToolbar"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_21pxh"
@@ -37,7 +37,7 @@
                         android:layout_width="0dp"
                         android:lineSpacingExtra="@dimen/_6pxh"
                         android:singleLine="true"
-                        android:text="@{dashboardAdminVM.dashboardAdminModel.txtTitle}"
+
                         style="@style/txtFahkwangbold17" tools:text="@string/lbl_dashboard"/>
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>
@@ -51,14 +51,14 @@
                     android:layout_height="@dimen/_95pxh"
                     android:layout_width="@dimen/_140pxh"
                     android:scaleType="fitXY"
-                    imageRes="@{@drawable/img_plandetravail_1}"
-                    tools:ignore="ContentDescription" tools:src="@drawable/img_plandetravail_1"/>
+                    imageRes="@{@drawable/img_plandetravail}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_plandetravail"/>
                 <LinearLayout android:id="@+id/linearRowellipsesix"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_27pxv"
                     android:layout_marginStart="@dimen/_46pxh"
                     android:layout_marginTop="@dimen/_14pxv"
-                    android:layout_weight="0.47"
+                    android:layout_weight="0.53"
                     android:layout_width="0dp" android:orientation="horizontal">
                     <FrameLayout android:id="@+id/frameStackellipsesix"
                         android:layout_height="@dimen/_51pxv"
@@ -84,86 +84,151 @@
                     <LinearLayout android:gravity="start"
                         android:id="@+id/linearColumnsarahw"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_3pxv"
+                        android:layout_marginBottom="@dimen/_1pxv"
                         android:layout_marginStart="@dimen/_15pxh"
-                        android:layout_weight="0.6"
+                        android:layout_weight="0.64"
                         android:layout_width="0dp" android:orientation="vertical">
                         <TextView android:ellipsize="end"
                             android:id="@+id/txtSarahW"
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
-                            android:singleLine="true"
-                            android:text="@{dashboardAdminVM.dashboardAdminModel.txtSarahW}"
-                            style="@style/txtPromptregular17" tools:text="@string/lbl_sarah_w"/>
-                        <TextView android:ellipsize="end"
-                            android:id="@+id/txtAdmin"
-                            android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/_10pxh"
                             android:layout_width="match_parent"
                             android:singleLine="true"
-                            android:text="@{dashboardAdminVM.dashboardAdminModel.txtAdmin}"
-                            style="@style/txtPromptregular15" tools:text="@string/lbl_admin"/>
+
+                            style="@style/txtPromptregular17" tools:text="@string/lbl_sarah_w"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtEnseignente"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+
+                            style="@style/txtPromptregular15" tools:text="@string/lbl_enseignente"/>
                     </LinearLayout>
                 </LinearLayout>
-                <ImageView android:id="@+id/imageCheckmark"
-                    android:layout_height="@dimen/_18pxh"
-                    android:layout_marginBottom="@dimen/_58pxv"
-                    android:layout_marginStart="@dimen/_3pxh"
-                    android:layout_marginTop="@dimen/_18pxv"
-                    android:layout_width="@dimen/_21pxh"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_checkmark"
-                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark"/>
             </LinearLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:gravity="center_horizontal"
-                android:id="@+id/recyclerGridcomputer"
+
+            <LinearLayout android:id="@+id/linearRowteam"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_16pxh"
-                android:layout_marginStart="@dimen/_16pxh"
-                android:layout_marginTop="@dimen/_35pxv"
-                android:layout_width="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="2" itemSpace="@{@dimen/_15pxh}"
-                tools:itemCount="4" tools:listitem="@layout/row_gridcomputer"/>
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearColumnteam"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+                    <ImageView android:id="@+id/imageTeam"
+                        android:layout_gravity="end"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_marginEnd="@dimen/_56pxh"
+                        android:layout_marginStart="@dimen/_56pxh"
+                        android:layout_marginTop="@dimen/_23pxv"
+                        android:layout_width="@dimen/_40pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_team"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_team"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPresence"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_50pxh"
+                        android:layout_marginStart="@dimen/_50pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_3pxh"
+                        android:singleLine="true"
+
+                        style="@style/txtABeeZeeregular15" tools:text="@string/lbl_presence"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtExcel"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_20pxv"
+                        android:layout_marginEnd="@dimen/_50pxh"
+                        android:layout_marginStart="@dimen/_50pxh"
+                        android:layout_marginTop="@dimen/_5pxv"
+                        android:layout_width="wrap_content"
+                        android:lineSpacingExtra="@dimen/_3pxh"
+                        android:singleLine="true"
+
+                        style="@style/txtABeeZeeregular12_1" tools:text="@string/lbl_excel"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearColumndesktopOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15pxh"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+                    <ImageView android:id="@+id/imageDesktopOne"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_36pxh"
+                        android:layout_marginEnd="@dimen/_34pxh"
+                        android:layout_marginStart="@dimen/_34pxh"
+                        android:layout_marginTop="@dimen/_21pxv"
+                        android:layout_width="@dimen/_38pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_desktop_yellow_900"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_desktop_yellow_900"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtUploadCours"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_39pxv"
+                        android:layout_marginEnd="@dimen/_33pxh"
+                        android:layout_marginStart="@dimen/_34pxh"
+                        android:layout_marginTop="@dimen/_20pxv"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_3pxh"
+                        android:singleLine="true"
+
+                        style="@style/txtABeeZeeregular15" tools:text="@string/lbl_upload_cours"/>
+                </LinearLayout>
+            </LinearLayout>
             <LinearLayout android:gravity="end"
                 android:id="@+id/linearRowlogout"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10pxh"
-                android:layout_marginTop="@dimen/_65pxv"
+                android:layout_marginTop="@dimen/_40pxv"
                 android:layout_width="match_parent"
                 android:orientation="horizontal" style="@style/groupStylecornerRadius">
+
                 <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end" android:gravity="center"
                     android:id="@+id/btnLogout"
+                    style="@style/btnGradientRounded"
+                    android:layout_width="381dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.84"
-                    android:layout_width="0dp"
+                    android:layout_weight="0.81"
+                    android:ellipsize="end"
+                    android:gravity="center"
                     android:lineSpacingExtra="@dimen/_4pxh"
-                    android:paddingBottom="@dimen/_8pxv"
-                    android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_30pxh"
                     android:paddingTop="@dimen/_8pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_8pxv"
                     android:singleLine="true"
                     android:text="@string/lbl_logout"
                     android:textAllCaps="false"
-                    style="@style/btnGradientRounded" tools:text="@string/lbl_logout"/>
+                    tools:text="@string/lbl_logout" />
+
                 <TextView android:ellipsize="end"
                     android:id="@+id/txtDetailProfile"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_4pxv"
                     android:layout_marginStart="@dimen/_87pxh"
                     android:layout_marginTop="@dimen/_17pxv"
-                    android:layout_weight="0.16"
+                    android:layout_weight="0.19"
                     android:layout_width="0dp"
                     android:lineSpacingExtra="@dimen/_3pxh"
                     android:singleLine="true"
-                    android:text="@{dashboardAdminVM.dashboardAdminModel.txtDetailProfile}"
+
                     style="@style/txtABeeZeeitalic15" tools:text="@string/lbl_detail_profile"/>
             </LinearLayout>
             <LinearLayout android:id="@+id/linearRowhome"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_65pxv"
+                android:layout_marginTop="@dimen/_64pxv"
                 android:layout_width="match_parent"
                 android:orientation="horizontal" style="@style/groupStylewhite_A701cornerRadius">
                 <LinearLayout android:gravity="center_horizontal"
@@ -194,7 +259,7 @@
                         android:layout_marginTop="@dimen/_4pxv"
                         android:layout_width="match_parent"
                         android:singleLine="true"
-                        android:text="@{dashboardAdminVM.dashboardAdminModel.txtHomeOne}"
+
                         style="@style/txtPromptregular10" tools:text="@string/lbl_home"/>
                 </LinearLayout>
                 <ImageView android:id="@+id/imageIconssearch"

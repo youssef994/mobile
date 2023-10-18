@@ -132,34 +132,43 @@
                             android:layout_gravity="bottom|start"
                             android:layout_height="@dimen/_135pxv"
                             android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_160pxh"/>
-                        <LinearLayout android:id="@+id/linearColumnteam"
+
+                        <LinearLayout
+                            android:id="@+id/linearColumnteam"
+                            android:layout_width="151dp"
+                            android:layout_height="90dp"
                             android:layout_gravity="center"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_40pxv"
-                            android:layout_marginEnd="@dimen/_38pxh"
                             android:layout_marginStart="@dimen/_40pxh"
                             android:layout_marginTop="@dimen/_40pxv"
-                            android:layout_width="match_parent" android:orientation="vertical">
+                            android:layout_marginEnd="@dimen/_38pxh"
+                            android:layout_marginBottom="@dimen/_40pxv"
+                            android:orientation="vertical">
+
                             <ImageView
-                                android:gravity="center_horizontal"
                                 android:id="@+id/imageTeam"
-                                android:layout_height="@dimen/_30pxh"
-                                android:layout_marginEnd="@dimen/_7pxh"
+                                android:layout_width="141dp"
+                                android:layout_height="54dp"
                                 android:layout_marginStart="@dimen/_6pxh"
-                                android:layout_width="match_parent"
+                                android:layout_marginEnd="@dimen/_7pxh"
+                                android:gravity="center_horizontal"
                                 android:scaleType="fitXY"
                                 android:src="@drawable/img_team_purple_600"
-                                tools:ignore="ContentDescription" tools:src="@drawable/img_team_purple_600"/>
-                            <TextView android:ellipsize="end"
-                                android:gravity="start"
+                                tools:ignore="ContentDescription"
+                                tools:src="@drawable/img_team_purple_600"
+                                tools:srcCompat="@drawable/img_team_purple_600" />
+
+                            <TextView
                                 android:id="@+id/txtDetailProfil"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_18pxv"
+                                style="@style/txtABeeZeeregular15"
                                 android:layout_width="match_parent"
+                                android:layout_height="49dp"
+                                android:layout_marginTop="@dimen/_18pxv"
+                                android:ellipsize="end"
+                                android:gravity="start"
                                 android:lineSpacingExtra="@dimen/_3pxh"
                                 android:singleLine="true"
                                 android:text="@{etudiantVM.etudiantModel.txtDetailProfil}"
-                                style="@style/txtABeeZeeregular15" tools:text="@string/lbl_detail_profil"/>
+                                tools:text="@string/lbl_detail_profil" />
                         </LinearLayout>
                     </FrameLayout>
                     <LinearLayout android:gravity="center_horizontal"
@@ -305,78 +314,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_9pxv"
             android:layout_width="match_parent"
-            android:orientation="vertical" style="@style/groupStylewhite_A701cornerRadius">
-            <LinearLayout android:id="@+id/linearRowhome"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:orientation="horizontal" style="@style/groupStylewhite_A701cornerRadius">
-                <ImageView android:id="@+id/imageHome"
-                    android:layout_height="@dimen/_22pxh"
-                    android:layout_marginBottom="@dimen/_23pxv"
-                    android:layout_marginStart="@dimen/_50pxh"
-                    android:layout_marginTop="@dimen/_24pxv"
-                    android:layout_width="@dimen/_22pxh"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_home_bluegray_400"
-                    tools:ignore="ContentDescription" tools:src="@drawable/img_home_bluegray_400"/>
-                <LinearLayout android:gravity="center_horizontal"
-                    android:id="@+id/linearColumn"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_9pxv"
-                    android:layout_marginStart="@dimen/_56pxh"
-                    android:layout_marginTop="@dimen/_11pxv"
-                    android:layout_weight="0.37"
-                    android:layout_width="0dp"
-                    android:orientation="vertical" style="@style/groupStyle">
-                    <LinearLayout android:gravity="center_horizontal"
-                        android:id="@+id/linearColumnsearch"
-                        android:layout_height="match_parent"
-                        android:layout_width="match_parent"
-                        android:orientation="vertical" style="@style/groupStyle">
-                        <ImageView android:id="@+id/imageSearch"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_height="@dimen/_24pxh"
-                            android:layout_marginEnd="@dimen/_5pxh"
-                            android:layout_marginStart="@dimen/_5pxh"
-                            android:layout_marginTop="@dimen/_4pxv"
-                            android:layout_width="@dimen/_24pxh"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/img_search"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_search"/>
-                        <TextView android:ellipsize="end"
-                            android:gravity="start"
-                            android:id="@+id/txtExplore"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_9pxv"
-                            android:layout_width="match_parent"
-                            android:singleLine="true"
-                            android:text="@{etudiantVM.etudiantModel.txtExplore}"
-                            style="@style/txtDMSansregular10_2" tools:text="@string/lbl_explore"/>
-                    </LinearLayout>
-                </LinearLayout>
-                <ImageButton
-                    android:background="@drawable/rectangle_bg_bluegray_400_radius_10_085"
-                    android:id="@+id/btnVectorStroke"
-                    android:layout_height="@dimen/_20pxh"
-                    android:layout_marginBottom="@dimen/_23pxv"
-                    android:layout_marginStart="@dimen/_57pxh"
-                    android:layout_marginTop="@dimen/_25pxv"
-                    android:layout_width="@dimen/_20pxh"
-                    android:paddingHorizontal="@dimen/_5pxh"
-                    android:paddingVertical="@dimen/_5pxv"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/img_iconsplayci" tools:ignore="ContentDescription"/>
-                <ImageView android:id="@+id/imageIconsuser"
-                    android:layout_height="@dimen/_18pxh"
-                    android:layout_marginBottom="@dimen/_24pxv"
-                    android:layout_marginEnd="@dimen/_50pxh"
-                    android:layout_marginStart="@dimen/_67pxh"
-                    android:layout_marginTop="@dimen/_26pxv"
-                    android:layout_width="@dimen/_16pxh"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_iconsuser"
-                    tools:ignore="ContentDescription" tools:src="@drawable/img_iconsuser"/>
-            </LinearLayout>
-        </LinearLayout>
+            android:orientation="vertical" style="@style/groupStylewhite_A701cornerRadius"/>
     </LinearLayout>
 </layout>

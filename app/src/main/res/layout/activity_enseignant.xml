@@ -106,17 +106,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:gravity="center_horizontal"
-                android:id="@+id/recyclerEnseignant"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_20pxh"
-                android:layout_marginStart="@dimen/_20pxh"
-                android:layout_marginTop="@dimen/_61pxv"
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                itemSpace="@{@dimen/_15pxh}" tools:itemCount="2" tools:listitem="@layout/row_enseignant"/>
+
             <LinearLayout android:id="@+id/linearRowteam"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_20pxh"

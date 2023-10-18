@@ -6,6 +6,7 @@
     <LinearLayout android:id="@+id/linearAuthmain"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:background="#F6D9FB"
         android:orientation="vertical" style="@style/groupStylewhite_A700">
         <ImageView android:id="@+id/imagePlandetravail"
             android:layout_gravity="start"
