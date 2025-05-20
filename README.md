@@ -59,25 +59,37 @@ graph TD
 
 The UI layer consists of XML layouts that use data binding to connect with their respective ViewModels. This approach reduces boilerplate code and provides a clear separation between UI and business logic.
 
+# Answer
+
+I see you're encountering errors with the Mermaid diagrams in the README.md file I provided. The errors are occurring because of the syntax in the class diagrams. Let me fix those diagrams for you so they'll render correctly on GitHub.
+
+The issue is with the class diagram syntax - specifically with how class names with spaces are defined. Let's correct the syntax for all the Mermaid diagrams:
+
+## Fixed Class Diagrams
+
+For the UI Layer diagram, instead of:
+
+
 ```mermaid
 classDiagram
-    class "XML Layout" {
+    class XMLLayout {
         +data binding variables
         +UI elements
     }
-    class "ViewModel" {
+    class ViewModel {
         +LiveData properties
         +Business logic
         +Data processing
     }
-    class "Model" {
+    class Model {
         +Data structure
         +Business rules
     }
     
-    "XML Layout" --> "ViewModel" : binds to
-    "ViewModel" --> "Model" : uses
+    XMLLayout --> ViewModel : binds to
+    ViewModel --> Model : uses
 ```
+
 
 #### ViewModel Layer
 
@@ -91,54 +103,53 @@ Repositories act as a single source of truth for data, abstracting the data sour
 
 ```mermaid
 classDiagram
-    class "ViewModel" {
+    class ViewModel {
         +requestData()
     }
-    class "Repository" {
+    class Repository {
         +fetchFromNetwork()
         +getFromLocal()
         +saveToLocal()
     }
-    class "RetrofitService" {
+    class RetrofitService {
         +apiEndpoints()
     }
-    class "Local Storage" {
+    class LocalStorage {
         +read()
         +write()
     }
     
-    "ViewModel" --> "Repository" : uses
-    "Repository" --> "RetrofitService" : makes API calls
-    "Repository" --> "Local Storage" : reads/writes data
+    ViewModel --> Repository : uses
+    Repository --> RetrofitService : makes API calls
+    Repository --> LocalStorage : reads/writes data
 ```
-
 ### Network Layer Architecture
 
 The network layer is built using Retrofit for making REST API calls. The architecture follows a well-defined structure to manage network requests and responses efficiently.
 
 ```mermaid
 classDiagram
-    class "RetrofitService" {
+    class RetrofitService {
         +apiEndpoints()
     }
-    class "RetrofitProvider" {
+    class RetrofitProvider {
         +provideRetrofitClient()
         +provideAPIService()
     }
-    class "Repository" {
+    class Repository {
         +makeApiCall()
     }
-    class "ResponseModels" {
+    class ResponseModels {
         +data fields
     }
-    class "RequestModels" {
+    class RequestModels {
         +request parameters
     }
     
-    "Repository" --> "RetrofitService" : uses
-    "RetrofitProvider" --> "RetrofitService" : creates
-    "RetrofitService" --> "ResponseModels" : deserializes responses to
-    "RetrofitService" --> "RequestModels" : serializes requests from
+    Repository --> RetrofitService : uses
+    RetrofitProvider --> RetrofitService : creates
+    RetrofitService --> ResponseModels : deserializes responses to
+    RetrofitService --> RequestModels : serializes requests from
 ```
 
 ### Dependency Injection with Koin
