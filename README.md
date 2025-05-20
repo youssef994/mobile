@@ -181,30 +181,6 @@ The application follows a well-organized package structure that reflects its arc
 | `modules/*/data` | Contains data handling, ViewModels, and models |
 | `network` | Contains API-related code including models, repository, and services |
 
-### Architectural Flow Sequence
-
-The following diagram illustrates how data flows through the application architecture:
-
-```mermaid
-sequenceDiagram
-    participant "User" as User
-    participant "View" as View
-    participant "ViewModel" as ViewModel
-    participant "Repository" as Repository
-    participant "API Service" as API
-    participant "Backend" as Backend
-    
-    User->>View: Interacts (clicks, inputs)
-    View->>ViewModel: Triggers action via data binding
-    ViewModel->>Repository: Requests data
-    Repository->>API: Makes API call
-    API->>Backend: Sends HTTP request
-    Backend->>API: Returns HTTP response
-    API->>Repository: Returns parsed data
-    Repository->>ViewModel: Returns processed result
-    ViewModel->>View: Updates LiveData/Observable
-    View->>User: Shows updated UI
-```
 
 ### Technical Stack
 
@@ -230,11 +206,3 @@ The application architecture follows modern Android development practices with M
 4. Scalability for adding new features
 5. Efficient data flow between UI and data sources
 ```
-
-# Notes
-
-The content I've provided is based on the "Application Architecture" wiki page from your mobile application repository. I've formatted it as a README.md file suitable for GitHub, preserving all the diagrams, tables, and technical information. The original content includes information about your application's MVVM architecture, dependency injection with Koin, network layer with Retrofit, and package structure. I've maintained the mermaid diagrams which will render properly on GitHub.
-
-Wiki pages you might want to explore:
-- [Application Architecture (youssef994/mobile)](/wiki/youssef994/mobile#2)
-- [User Roles and Access Control (youssef994/mobile)](/wiki/youssef994/mobile#3)
